@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #131122;
+}
+nav {
+    position: fixed;
+
+    top: 0.5vh; 
+
+    width: 100%;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment of all items */
+    justify-content: space-around; /* Distributes buttons evenly */
+    background-color: #131122;
+    box-shadow: 0 0.2vh 0.5vh rgba(0,0,0,0.1);
+    padding: 1vh 0;
+    border-bottom: 0.2vh solid white; /* Solid white line at the bottom */
+}
+
+button, nav a.button {
+    padding: 0.8vh 1.5vw;  /* Reduced from 1vh 2vw */
+    margin: 1vh 1vw;       /* You can adjust margin if needed */
+    cursor: pointer;
+    color: white;          /* Ensures text is white */
+    background-color: transparent; /* Keeps button background transparent */
+    font-family: 'Sanchez', serif; /* Continues using the Sanchez font */
+    font-size: 1.6vh;      /* Slightly reduced from 1.8vh */
+    height: 4vh;           /* Optional: if previously set to a larger height */
+    border: none;
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s; /* Keeps the smooth transition */
+    vertical-align: middle;
+}
+
+button:hover, nav a.button:hover {
+    background-color: white; /* Changes background to white on hover */
+    color: #000080;          /* Changes text color to navy on hover */
+}
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+button.active {
+    border-bottom: 0.2vh solid white; /* Adds a white underline to the active button */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1/3 for text and 2/3 for image */
+    height: 100vh; /* Full viewport height */
+    align-items: center; /* Aligns content vertically center */
+    gap: 2vh; /* Optional: adds some space between text and image */
+}
+
+.text-block {
+    padding: 2vh; /* Adds padding inside the text block for spacing */
+    color: white; /* As per your color scheme */
+}
+
+.home-container {
+    display: flex;  /* Or 'grid' depending on your layout preference */
+    align-items: center;  /* Centers the items vertically */
+    justify-content: space-between; /* Adjusts the space distribution */
+    height: 100vh;
+    padding: 2vh;  /* Adds padding around the entire container */
+}
+
+.meshot {
+    width: 66.66%; /* Adjust the width if necessary */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.meshot {
+    width: 60;  /* Takes up 2/3 of the container */
+    height: auto;  /* Maintains the aspect ratio */
+    margin: 2vh;  /* Adds margin around the image */
+}
+
+.text-block h2 {
+    margin-bottom: 2.5vh;  /* Adds space below the h2 */
+}
+
+
+.about-container {
+    display: flex;  /* Or 'grid' depending on your layout preference */
+    align-items: center;  /* Centers the items vertically */
+    justify-content: space-between; /* Adjusts the space distribution */
+    height: 300vh;
+    padding: 1vh;  /* Adds padding around the entire container */
+}
+
+.aboutshot {
+    width: 40%; /* Adjust the width if necessary */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.aboutshot {
+    width: 50;  /* Takes up 2/3 of the container */
+    height: auto;  /* Maintains the aspect ratio */
+    margin: 2vh;  /* Adds margin around the image */
+}
+
+.text-block {
+    text-align: left;
+    font-family: 'Sanchez', serif;
+}
+
+.text-block p {
+    font-size: 1.8vh;
+    line-height: 1.6;
+    margin-bottom: 2vh;  /* Add space after each paragraph for clear separation */
+    padding: 1vh; /* Optional: Adds padding inside each paragraph block */
+
+}
+
+#experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 2vw; /* Optional: space between the columns */
+    align-items: center; /* Align items to the start of each cell */
+    text-align: center; /* Center text below images */
+    padding: 2vh; /* Padding around the entire grid */
+    width: 100%;
+    margin: auto;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.experience-image {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 40vw; /* Limit maximum width to keep images reasonable */
+    max-height: 40vh;
+}
+
+.experience-title {
+    margin-top: 1vh; /* Space between the image and the title */
+    font-size: 1.8vh; /* Appropriate font size for readability */
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    grid-template-rows: repeat(2, 1fr); /* Creates two rows */
+    gap: 2vw; /* Space between grid items */
+    padding: 2vh; /* Padding around the grid container */
+    align-items: center; /* Centers items vertically in their cells */
+    justify-items: center; /* Centers items horizontally in their cells */
+    text-align: center; /* Ensures text within each block is centered */
+}
+
+.project {
+
+    border-radius: 8vh; /* Rounded corners for aesthetics */
+    padding: 1.5vw; /* Padding within each project block */
+}
+
+.project-image {
+    width: 35vw; /* Limits the size of the image */
+    height: 35vh; /* Maintains aspect ratio */
+    margin-bottom: 0.5vh; /* Space between the image and the text */
+}
+
+.project p {
+    margin: 0; /* Removes default margin from paragraphs */
+}
+
+
+
+
+
+/* Style the hr tag if necessary */
+hr {
+    margin-top: 2vh; /* Space above the horizontal line */
+}
+
+@media (max-width: 76.8vw) {
+    button, nav a.button {
+        padding: 2vw 3vw; /* Larger padding for better touch target size on smaller devices */
+        font-size: 3.5vw; /* Larger font size for better readability on smaller screens */
+    }
+
+
+
+
+
+}
